@@ -1,0 +1,127 @@
+:root {
+  --text: #fff;
+  --bg: #000;
+  --font-main: "Inter", sans-serif;
+  --font-hero: "Italiana", serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 8%;
+}
+
+.hero .right-container h4 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.hero .right-container h4 span {
+  font-family: var(--font-hero);
+}
+
+.hero .right-container h1:nth-child(2) {
+  font-family: var(--font-hero);
+  font-size: 100px;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.hero .right-container h1:nth-child(3) {
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: 200;
+  margin: 10px 0 20px;
+}
+
+.hero .right-container p {
+  font-size: 14px;
+  letter-spacing: 4px;
+  opacity: 0.7;
+}
+
+.left-container {
+  width: 40%;
+  height: 70%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* MARQUEE */
+.marquee {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marquee span {
+  display: inline-block;
+  padding: 12px 0;
+  font-size: 14px;
+  animation: scroll 100s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.left-container {
+  width: 40%;
+  height: auto;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.focus-box h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.focus-box h3 {
+  font-size: 22px;
+  margin: 5px 0 10px;
+  font-weight: 500;
+}
+
+.focus-box p {
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.skills span {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 14px;
+  margin: 5px 6px;
+  font-size: 12px;
+  border-radius: 20px;
+  opacity: 0.9;
+  transition: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.skills span:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.35);
+  border-color: #fff;
+}
