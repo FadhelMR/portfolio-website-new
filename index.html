@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fadhel's Portfolio Web</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,14 +14,20 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
+    <!-- Section Notification -->
+    <div class="section-notif" id="sectionNotif"></div>
+
+    <div id="notif"></div>
+
     <!-- scroll indicator -->
     <div id="scroll-indicator"></div>
 
     <!-- hero section -->
-    <section class="hero">
+    <section class="hero" id="home" data-title="This is Home section">
       <div class="right-container">
         <h4>Hi. <span>I'm</span></h4>
         <h1>Fadhel</h1>
@@ -32,7 +38,7 @@
       <div class="left-container">
         <div class="focus-box">
           <h4>FOCUS ON</h4>
-          <h3>Full Stack Developer</h3>
+          <h3>Web & App Developer</h3>
           <p>IDN Boarding School<br />2021-2027</p>
 
           <h4 style="margin-top: 40px">Skills</h4>
@@ -54,16 +60,140 @@
     <div class="marquee" id="marquee"></div>
 
     <!-- About section -->
-    <section class="about">
+    <section
+      id="about"
+      class="about-section"
+      data-title="You're now in the About section."
+    >
       <div class="about-container">
-        <div class="right-about-container">
-          <img src="" alt="" />
+        <div class="about-left">
+          <div class="photo-wrapper">
+            <img
+              src="assets/img/mypicture.jpg"
+              alt="Your Photo"
+              class="about-photo"
+            />
+            <div class="floating-accent"></div>
+          </div>
         </div>
-        <div class="left-about-container">
-          <h1>test</h1>
+
+        <div class="about-right">
+          <h1 class="ghost-title">Fadhel</h1>
+          <h2 class="about-title">Hello, I’m <span>Fadhel</span></h2>
+          <p class="about-subtitle">Developer • Designer • Cyber</p>
+          <p class="about-desc">
+            I’m a web developer who loves blending clean design with functional
+            code. Currently focusing on modern front-end development and UI
+            animation. I enjoy creating digital experiences that feel simple,
+            smooth, and alive.
+          </p>
         </div>
       </div>
     </section>
+
+    <!-- project section -->
+    <section
+      class="projects"
+      id="projects"
+      data-title="These are my projects—take a look."
+    >
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-grid">
+        <!-- PROJECT CARD -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/project1.jpg" alt="Project 1" />
+          </div>
+          <div class="project-info">
+            <h3>Project Title 1</h3>
+            <p>
+              Short description about the project. Clean, modern, and
+              responsive.
+            </p>
+
+            <div class="project-links">
+              <a href="#" target="_blank">Preview</a>
+              <a href="#" target="_blank">Github</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/img/project2.jpg" alt="Project 2" />
+          </div>
+          <div class="project-info">
+            <h3>Project Title 2</h3>
+            <p>
+              This is another example of your work with a spotlight hover
+              effect.
+            </p>
+
+            <div class="project-links">
+              <a href="#" target="_blank">Preview</a>
+              <a href="#" target="_blank">Github</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section
+      id="contact"
+      class="min-h-screen flex flex-col justify-center items-center p-8"
+      data-title="Let’s communicate — this is the contact section."
+    >
+      <h2 class="text-4xl font-bold mb-6">Contact</h2>
+
+      <p class="text-lg text-center max-w-xl mb-8 opacity-80">
+        Feel free to reach out for collaborations, projects, or just to say hi!
+      </p>
+
+      <form
+        id="contact-form"
+        class="w-full max-w-md bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 space-y-4"
+      >
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full p-3 rounded-xl border border-white/20 bg-white/5 text-white outline-none focus:border-white/40 transition"
+        />
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full p-3 rounded-xl border border-white/20 bg-white/5 text-white outline-none focus:border-white/40 transition"
+        />
+
+        <textarea
+          placeholder="Your Message"
+          class="w-full p-3 rounded-xl border border-white/20 bg-white/5 text-white outline-none focus:border-white/40 h-32 transition"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="w-full p-3 bg-white text-black rounded-xl hover:opacity-80 transition"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <h3 class="footer-title">Fadhel Muhammad Ramadhan</h3>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="footer-copy">© 2025 Portfolio website. All Rights Reserved.</p>
+    </footer>
 
     <script src="assets/js/script.js"></script>
   </body>
